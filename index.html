@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siva Shanmugam - Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #ffffff;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2b2e4a;
+        }
+        header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        nav {
+            background-color: #2b2e4a;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #00f2fe;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        nav ul li a:hover {
+            color: #4facfe;
+        }
+        #welcome {
+            text-align: center;
+            padding: 40px;
+        }
+        #welcome button {
+            background-color: #00f2fe;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #welcome button:hover {
+            background-color: #4facfe;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2b2e4a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SIVA SHANMUGAM V.M</h1>
+        <p>"Exploring the Universe of AI & ML"</p>
+        <img src="profile.jpg" alt="Profile Picture">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="welcome">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my projects, research, and passion for innovation.</p>
+            <button onclick="explore()">Explore More</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Siva Shanmugam | Built with Passion</p>
+    </footer>
+    <script>
+        function explore() {
+            window.location.href = "project.html"; // Change this to the desired URL
+        }
+    </script>
+</body>
+</html>

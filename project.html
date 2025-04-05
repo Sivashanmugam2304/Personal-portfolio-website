@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Siva Shanmugam</title>
+    <style>
+        /* Existing styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: #ffffff;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #2b2e4a;
+        }
+        nav {
+            background-color: #2b2e4a;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #00f2fe;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        nav ul li a:hover {
+            color: #4facfe;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .project {
+            background-color: #2b2e4a;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer; /* Add pointer to indicate clickability */
+        }
+        .project h3 {
+            color: #00f2fe;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2b2e4a;
+        }
+        
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal-content:hover {
+            transform: scale(1.02);
+        }
+
+        /* Button styles */
+        .project button {
+            background-color: #00f2fe;
+            color: #2b2e4a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .project button:hover {
+            background-color: #4facfe;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="project-gallery">
+            <div class="project">
+                <h3>Flappy Bird Game</h3>
+                <img src="message.png" alt="Flappy Bird Project" class="clickable-image">
+                <button onclick="window.location.href='https://github.com/Sivashanmugam2304/My-projects-.git'"">View Project</button><h3>view it on github repository</h3>
+                <p>A fun game built using Python and Pygame, recreating the iconic Flappy Bird experience.</p>
+            </div>
+            <div class="project">
+                <h3>Account Search Page</h3>
+                <img src="accountmaster.png" alt="Account Search Page" class="clickable-image">
+                <button onclick="window.location.href='accountmaster.html'">View Project</button>
+                <p>A simple and elegant search page designed using HTML and CSS for enhanced user experience.</p>
+            </div>
+            <div class="project">
+                <h3>Gold Investment Analysis</h3>
+                <img src="download.png" alt="Gold Investment Chart" class="clickable-image">
+                <p>This project analyzes gold investments made by various Indian and foreign companies. It visualizes the investment focus, current holdings, and growth of investments over time.</p>
+                <button onclick="window.location.href='gold.py'">View Project</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal structure -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Siva Shanmugam | Innovating One Project at a Time</p>
+    </footer>
+
+    <script>
+        // JavaScript for modal functionality
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
+        const images = document.querySelectorAll(".clickable-image");
+        const closeBtn = document.querySelector(".close");
+
+        images.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

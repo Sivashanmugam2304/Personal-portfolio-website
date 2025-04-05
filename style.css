@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #ffffff;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2b2e4a;
+}
+nav {
+    background-color: #2b2e4a;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #00f2fe;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+nav ul li a:hover {
+    color: #4facfe;
+}
+section {
+    text-align: center;
+    padding: 40px;
+}
+section h2 {
+    font-size: 36px;
+    color: #2b2e4a;
+}
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2b2e4a;
+    padding: 20px;
+    border-radius: 10px;
+}
+form label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+form button {
+    background-color: #00f2fe;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #4facfe;
+}
+.back-button {
+    background-color: #ff4757; /* Red color for the back button */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; /* Space above the button */
+}
+.back-button:hover {
+    background-color: #ff6b81; /* Lighter red on hover */
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2b2e4a;
+}
